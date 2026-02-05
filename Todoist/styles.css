@@ -1,0 +1,187 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fondo general */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+.container label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Inputs y select */
+.container input,
+.container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Botones generales (solo los del formulario) */
+.container > button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Botón limpiar */
+.container > button:first-of-type {
+    background-color: #e2e8f0;
+    color: #333;
+}
+
+.container > button:first-of-type:hover {
+    background-color: #cbd5e1;
+}
+
+/* Botón agregar */
+.container > button:last-of-type {
+    background-color: #667eea;
+    color: white;
+}
+
+.container > button:last-of-type:hover {
+    background-color: #5a67d8;
+}
+
+/* Lista de tareas */
+ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+li {
+    background-color: #f1f5f9;
+    padding: 12px 14px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.3s ease-in-out;
+    width: 50%;
+    min-width: 150px;
+}
+
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Texto de la tarea */
+li span {
+    font-size: 12px;
+    color: #333;
+    flex: 1;
+    word-break: break-word;
+}
+
+/* Botón eliminar (corregido) */
+.container li button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+    min-width: 60px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.container li button:hover {
+    background-color: #dc2626;
+    transform: scale(1.05);
+}
+
+.container li button:active {
+    transform: scale(0.95);
+}
+
+/* Colores por prioridad en el SELECT */
+.select-alta {
+    background-color: #fee2e2;
+    border-color: red;
+}
+
+.select-media {
+    background-color: #fef9c3;
+    border-color: yellow;
+}
+
+.select-baja {
+    background-color: #dcfce7;
+    border-color: green;
+}
+
+/* Colores de la CARD según prioridad */
+.priority-alta {
+    background-color: #fee2e2;
+    border-left: 6px solid #ef4444;
+}
+
+.priority-media {
+    background-color: #fef9c3;
+    border-left: 6px solid #facc15;
+}
+
+.priority-baja {
+    background-color: #dcfce7;
+    border-left: 6px solid #22c55e;
+}
+
+

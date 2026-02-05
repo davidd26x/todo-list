@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <h2>To-Do List</h2>
+    
+    <label for="add">Escribe aquí la tarea:</label>
+    <input type="text" id="add">
+    
+    <label for="priority">Ingrese la prioridad:</label>
+    <select name="categorias" id="categorias">
+        <option value="" selected disabled hidden>Seleccione una opción</option>
+        <option value="1">Alta</option>
+        <option value="2">Media</option>
+        <option value="3">Baja</option>
+    </select>
+    <br> <br>
+    <button onclick="clean()">Limpiar</button>
+    <button onclick="addTask()">Agregar tarea</button>
+    
+    
+    
+</div>
+    <script src="todo-ist.js"></script>
+</body>
+</html>
